@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Evento</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+
+<h1>Editar evento</h1>
+
+<form method="POST">
+    <div class="mb-3">
+        <label>Tipo</label>
+        <input name="tipo" value="{{ evento.tipo }}" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Nombre</label>
+        <input name="nombre" value="{{ evento.nombre }}" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Carnet</label>
+        <input name="carnet" value="{{ evento.carnet }}" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Dirección</label>
+        <input name="direccion" value="{{ evento.direccion_domicilio }}" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Garantía</label>
+        <input type="number" step="0.01" name="monto_garantia" value="{{ evento.monto_garantia }}" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Total</label>
+        <input type="number" step="0.01" name="monto_total" value="{{ evento.monto_total }}" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Fecha</label>
+        <input type="date" name="dia" value="{{ evento.dia }}" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label>Hora fin</label>
+        <input type="time" name="hora_fin" value="{{ evento.hora_fin }}" class="form-control">
+    </div>
+
+    <div class="mb-3 form-check">
+        <input type="checkbox" name="decoracion" class="form-check-input"
+               {% if evento.decoracion == "on" %}checked{% endif %}>
+        <label class="form-check-label">Decora</label>
+    </div>
+
+    <button class="btn btn-primary">Guardar cambios</button>
+    <a href="/" class="btn btn-secondary">Volver</a>
+</form>
+
+</body>
+</html>
