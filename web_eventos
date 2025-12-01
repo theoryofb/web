@@ -1,0 +1,9 @@
+web_eventos/
+│ app.py
+│ eventos.db  ← tu base de datos
+│ requirements.txt
+│
+└── templates/
+    │ listado.html
+    │ agregar.html
+    │ editar.html
